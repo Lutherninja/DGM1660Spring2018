@@ -1,6 +1,6 @@
 //Maya ASCII 2017ff05 scene
 //Name: Plane.ma
-//Last modified: Thu, Jan 18, 2018 03:44:34 PM
+//Last modified: Thu, Jan 18, 2018 03:45:55 PM
 //Codeset: 1252
 requires maya "2017ff05";
 currentUnit -l centimeter -a degree -t film;
@@ -13,13 +13,13 @@ fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "504A56EB-496E-2478-D67C-C5A65F1B1570";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.2176327674899845 -1.1898869296215082 25.233311086640072 ;
+	setAttr ".t" -type "double3" -0.90820636979673286 -1.5310188846379214 32.538816710748563 ;
 	setAttr ".r" -type "double3" 2.6616471988189874 -1805.3999999999357 -2.4958851716314564e-017 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "2213BE72-46EA-4A72-A37D-F295A77D7D21";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 20.738826431106283;
+	setAttr ".coi" 28.08482366326049;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
