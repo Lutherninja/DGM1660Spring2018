@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: Boat.ma
-//Last modified: Mon, Jan 22, 2018 03:19:39 PM
+//Last modified: Mon, Jan 22, 2018 04:14:12 PM
 //Codeset: 1252
 requires maya "2017";
 requires -nodeType "renderSetup" "renderSetup.py" "1.0";
@@ -14,13 +14,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "4EE3D5DB-4751-1663-D4FD-DCA801158037";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 11.074811357437742 1.3406827789874072 -4.3282162631608063 ;
-	setAttr ".r" -type "double3" 1.4616471657835723 -966.59999999966203 0 ;
+	setAttr ".t" -type "double3" -0.089324188279935157 4.3320268093448782 12.510530555265555 ;
+	setAttr ".r" -type "double3" -15.938352834204675 -1070.5999999995461 8.059609842140358e-016 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "5ED6F39B-40CF-414D-7302-1F9B0C1E2371";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 13.99876425768289;
+	setAttr ".coi" 11.775939160634662;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
