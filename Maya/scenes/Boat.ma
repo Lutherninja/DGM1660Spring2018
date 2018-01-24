@@ -1,6 +1,10 @@
 //Maya ASCII 2017ff05 scene
 //Name: Boat.ma
+<<<<<<< Updated upstream
 //Last modified: Tue, Jan 23, 2018 02:48:43 PM
+=======
+//Last modified: Wed, Jan 24, 2018 11:10:58 AM
+>>>>>>> Stashed changes
 //Codeset: 1252
 requires maya "2017ff05";
 requires -nodeType "renderSetup" "renderSetup.py" "1.0";
@@ -14,14 +18,23 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "4EE3D5DB-4751-1663-D4FD-DCA801158037";
 	setAttr ".v" no;
+<<<<<<< Updated upstream
 	setAttr ".t" -type "double3" -5.1204538024281545 5.8776447362339566 -19.17747508111006 ;
 	setAttr ".r" -type "double3" -9.938352823335677 194.59999999965194 0 ;
+=======
+	setAttr ".t" -type "double3" -10.464898688428898 8.2792206711863727 -9.8438666467601603 ;
+	setAttr ".r" -type "double3" -22.538352823541501 578.59999999985882 0 ;
+>>>>>>> Stashed changes
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "5ED6F39B-40CF-414D-7302-1F9B0C1E2371";
 	setAttr -k off ".v" no;
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999993;
+<<<<<<< Updated upstream
 	setAttr ".coi" 21.149853162190102;
+=======
+	setAttr ".coi" 13.875963520176473;
+>>>>>>> Stashed changes
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
