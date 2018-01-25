@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: Motorcycle.ma
-//Last modified: Thu, Jan 25, 2018 12:10:13 PM
+//Last modified: Thu, Jan 25, 2018 12:27:31 PM
 //Codeset: 1252
 requires maya "2017";
 requires -nodeType "HIKSolverNode" -nodeType "HIKCharacterNode" -nodeType "HIKState2SK"
@@ -16,14 +16,14 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "5D17E3ED-417B-2798-1275-9ABAD77952BC";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 12.48023720304932 -5.7839279904743925 48.439185804892041 ;
-	setAttr ".r" -type "double3" 8.6616471973618889 -9704.5999999892338 -2.061877556191391e-016 ;
+	setAttr ".t" -type "double3" -4.6727979070146262 4.479349727280689 18.824126834047366 ;
+	setAttr ".r" -type "double3" -3.938352801779053 -10450.199999999468 1.0098839396433776e-016 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "6181B58D-4D5E-C7CD-40CB-A49748C76EC4";
 	setAttr -k off ".v" no;
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 47.325908322701501;
+	setAttr ".coi" 19.935550118942501;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -11862,12 +11862,23 @@ createNode mesh -n "pCubeShape6" -p "pCube6";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.5 0.125 ;
+	setAttr ".pv" -type "double2" 0.5 0.091898508369922638 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 13 ".pt";
+	setAttr ".pt[6]" -type "float3" 0 -0.15337782 0 ;
+	setAttr ".pt[7]" -type "float3" 0 -0.15337782 0 ;
+	setAttr ".pt[16]" -type "float3" -0.27080318 -0.19634499 -1.4901161e-008 ;
+	setAttr ".pt[17]" -type "float3" -0.27080318 -0.19634496 -0.070225999 ;
+	setAttr ".pt[18]" -type "float3" 0.27080312 -0.19634496 -0.070225999 ;
+	setAttr ".pt[19]" -type "float3" 0.27080312 -0.19634499 -1.4901161e-008 ;
+	setAttr ".pt[20]" -type "float3" 0 2.9802322e-008 0 ;
+	setAttr ".pt[21]" -type "float3" 0 2.9802322e-008 0 ;
+	setAttr ".pt[22]" -type "float3" 0 2.9802322e-008 0 ;
+	setAttr ".pt[23]" -type "float3" 0 2.9802322e-008 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "pCube7";
 	rename -uid "2D3DDB40-4052-11D2-5D95-5B8509FADD20";
@@ -23268,6 +23279,20 @@ createNode polyTweak -n "polyTweak49";
 		 0 -2.1457672e-006 1.1920929e-006 -8.9406967e-008 2.3841858e-007 -3.5762787e-006 -1.0430813e-007
 		 2.3841858e-007 4.7683716e-007 1.1920929e-007 2.3841858e-007 7.1525574e-007 -1.4305115e-006
 		 2.3841858e-007 1.1920929e-007 8.3446503e-007 2.3841858e-007 -4.2632564e-013;
+createNode polySplitRing -n "polySplitRing57";
+	rename -uid "2BB1913A-4E46-735E-9ACD-C7A828A08259";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 6 "e[4:5]" "e[8:9]" "e[16]" "e[19]" "e[24]" "e[27]";
+	setAttr ".ix" -type "matrix" 1.9782186458633073 0 0 0 0 1.9782186458633073 0 0 0 0 3.3545953902882362 0
+		 0 2.4628635485529724 0 1;
+	setAttr ".wt" 0.5089372992515564;
+	setAttr ".dr" no;
+	setAttr ".re" 4;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".stp" 0;
+	setAttr ".div" 1;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
 select -ne :time1;
 	setAttr ".o" 0.8;
 	setAttr ".unw" 0.8;
@@ -23583,7 +23608,7 @@ connectAttr "polyExtrudeFace28.out" "pCylinderShape5.i";
 connectAttr "polyExtrudeFace39.out" "pCubeShape4.i";
 connectAttr "polyExtrudeFace37.out" "pCylinderShape6.i";
 connectAttr "polyExtrudeFace48.out" "pCubeShape5.i";
-connectAttr "polyExtrudeFace50.out" "pCubeShape6.i";
+connectAttr "polySplitRing57.out" "pCubeShape6.i";
 connectAttr "polyExtrudeFace52.out" "pCubeShape7.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
@@ -24286,6 +24311,8 @@ connectAttr "pCubeShape7.wm" "polyExtrudeFace52.mp";
 connectAttr "polyTweak49.out" "polyExtrudeFace53.ip";
 connectAttr "pCylinderShape3.wm" "polyExtrudeFace53.mp";
 connectAttr "polyExtrudeFace21.out" "polyTweak49.ip";
+connectAttr "polyExtrudeFace50.out" "polySplitRing57.ip";
+connectAttr "pCubeShape6.wm" "polySplitRing57.mp";
 connectAttr "Fight:Dummy_MeshSG.pa" ":renderPartition.st" -na;
 connectAttr "Dummy_Fight_Mat.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
