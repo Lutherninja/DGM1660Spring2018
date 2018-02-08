@@ -1,6 +1,6 @@
 //Maya ASCII 2017ff05 scene
 //Name: Blockrobot.ma
-//Last modified: Thu, Feb 08, 2018 03:07:30 PM
+//Last modified: Thu, Feb 08, 2018 03:45:35 PM
 //Codeset: 1252
 requires maya "2017ff05";
 currentUnit -l centimeter -a degree -t film;
@@ -13,13 +13,13 @@ fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "3631DFFF-49A6-AFE3-1662-99BA87936A34";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 2.0475738903471408 9.1476260942419962 19.126831623424863 ;
-	setAttr ".r" -type "double3" -21.938352729591806 -354.59999999943341 1.9967081373072436e-016 ;
+	setAttr ".t" -type "double3" -14.870447504079605 11.200145094281329 7.870672390853823 ;
+	setAttr ".r" -type "double3" -26.73835272959445 -418.59999999938037 3.0522993117912136e-015 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "BAF7E302-42A8-06D1-C54B-49A1A27E0B2B";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 22.399868744561637;
+	setAttr ".coi" 18.821803160152012;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -88,15 +88,17 @@ createNode mesh -n "pCubeShape1" -p "pCube1";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.5 0.75 ;
+	setAttr ".pv" -type "double2" 0.5 0.125 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 36 ".pt";
-	setAttr ".pt[2]" -type "float3" 0 -0.0061021326 0.14926097 ;
-	setAttr ".pt[3]" -type "float3" 0 -0.0061021326 0.14926097 ;
+	setAttr -s 38 ".pt";
+	setAttr ".pt[0]" -type "float3" 0 -0.0098892041 0.17200814 ;
+	setAttr ".pt[1]" -type "float3" 0 -0.0098892041 0.17200814 ;
+	setAttr ".pt[2]" -type "float3" 0 0.0037870719 0.48260647 ;
+	setAttr ".pt[3]" -type "float3" 0 0.0037870719 0.48260647 ;
 	setAttr ".pt[4]" -type "float3" -0.021340223 0.054791395 0.17978415 ;
 	setAttr ".pt[5]" -type "float3" 0.021340223 0.054791395 0.17978415 ;
 	setAttr ".pt[6]" -type "float3" 0.055857748 -0.1547718 0.18869516 ;
@@ -137,7 +139,7 @@ createNode mesh -n "pCubeShape2" -p "pCube2";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.5 0.875 ;
+	setAttr ".pv" -type "double2" 0.5 0.09375 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
