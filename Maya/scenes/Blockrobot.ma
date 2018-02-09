@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: Blockrobot.ma
-//Last modified: Fri, Feb 09, 2018 04:01:24 PM
+//Last modified: Fri, Feb 09, 2018 04:43:11 PM
 //Codeset: 1252
 requires maya "2017";
 currentUnit -l centimeter -a degree -t film;
@@ -13,13 +13,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "3631DFFF-49A6-AFE3-1662-99BA87936A34";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1.0925333596919931 1.479408871508527 16.055187135503107 ;
-	setAttr ".r" -type "double3" 15.261647219230507 -2875.7999999989975 -2.9897991876887132e-016 ;
+	setAttr ".t" -type "double3" -7.2718285351652261 8.6555285883559989 18.599584525929114 ;
+	setAttr ".r" -type "double3" -13.538352780783462 -3987.3999999980115 4.4780631405109879e-016 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "BAF7E302-42A8-06D1-C54B-49A1A27E0B2B";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 12.373871944698479;
+	setAttr ".coi" 16.740888679434597;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
